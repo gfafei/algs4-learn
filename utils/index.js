@@ -23,8 +23,14 @@ const show = function(array) {
     console.log(`${array[i]} `);
   }
 }
+const swap = function(array, i, j) {
+  const temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
 module.exports = {
   getRandomIntegers,
   isSorted,
-  show
+  show,
+  swap
 }
