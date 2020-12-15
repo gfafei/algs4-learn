@@ -1,4 +1,11 @@
 const Utils = require('../utils');
+const chalk = require('chalk');
+const assert = require('assert').strict;
+
+const options = {
+  draw: true
+}
+
 /**
  * insertion sort
  * @param arr number[]
