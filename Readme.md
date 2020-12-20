@@ -2,6 +2,6 @@
 
 - [x] random number
 - [x] selection sort and insert sort
-- [ ] bar chart
 - [ ] performance trace
  
+- [ ] use chart.js to show alghrim
