@@ -1,8 +1,8 @@
-const getRandomInt = function(min = 0, max = 1000000) {
+const getRandomInt = function(min, max) {
   return Math.floor(Math.random() * max) + min;
 }
 
-const getRandomIntegers = function({ min, max, count = 10 }) {
+const getRandomIntegers = function({ min = 0, max = 100000, count = 10 }) {
   const arr = [];
   for (let i = 0; i < count; i++) {
     arr.push(getRandomInt(min, max))
@@ -28,9 +28,14 @@ const swap = function(array, i, j) {
   array[i] = array[j];
   array[j] = temp;
 }
-module.exports = {
+const getDateStr = function() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+export default {
   getRandomIntegers,
   isSorted,
   show,
-  swap
+  swap,
+  getDateStr
 }
