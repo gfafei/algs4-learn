@@ -6,7 +6,7 @@ function test(sorts) {
   describe('sorts', () => {
     for (let key in sorts) {
       it(`${key} sort should work`, () => {
-        const array = Utils.getRandomIntegers({ count: 100 })
+        const array = Utils.getRandomIntegers({ count: 10000 })
         const sort = sorts[key]
         sort(array)
         assert.isTrue(Utils.isSorted(array))
