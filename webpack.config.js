@@ -37,8 +37,7 @@ module.exports = {
     disableHostCheck: true,
     publicPath: 'http://localhost:3000/dist/',
     hot: true,
-    open: true,
-    https: true
+    open: true
   },
   plugins: [
     new CleanWebpackPlugin(),
