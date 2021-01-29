@@ -1,18 +1,16 @@
 import Utils from '../utils'
 
 const partition = (array, lo, hi) => {
-  let i = lo, j = hi + 1
+  let i = lo + 1, j = hi
   let v = array[lo]
   while (true) {
-    i++
     while (array[i] < v) {
-      if (i === hi) break
       i++
+      if (i === hi) break
     }
-    j--
     while (array[j] > v) {
-      if (j === lo) break
       j--
+      if (j === lo) break
     }
     if (i >= j) break
     Utils.swap(array, i, j)
